@@ -1,4 +1,4 @@
-# Call Of Coding
+# Social Network
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Table of Contents
@@ -83,7 +83,7 @@ If you would like to contribute to my project please follow these steps!
 
 ## Credit
 
--ChatGPT helped with the package.json and tsconfig file to make sure everything would run correctly.
+-ChatGPT helped with the package.json and tsconfig files to make sure everything would run correctly.
 
 
 ## Project Links
