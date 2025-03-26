@@ -1,24 +1,11 @@
 import { Router } from 'express';
+import { getAllUsers, getUserById, createUser, updateUser, deleteUser, addFriend, removeFriend, } 
+from '../../controllers/user-controller.js';
+
 const router = Router();
-import {
-  getAllStudents,
-  getStudentById,
-  createStudent,
-  deleteStudent,
-  addAssignment,
-  removeAssignment,
-} from '../../controllers/studentController.js';
 
-// /api/students
-router.route('/').get(getAllStudents).post(createStudent);
+router.route('/').get(getAllUsers).post(createUser);
+router.route('/:userId').get(getUserById).put(updateUser).delete(deleteUser);
+router.route('/:userId/friends/:friendId').post(addFriend).delete(removeFriend);
 
-// /api/students/:studentId
-router.route('/:studentId').get(getStudentById).delete(deleteStudent);
-
-// /api/students/:studentId/assignments
-router.route('/:studentId/assignments').post(addAssignment);
-
-// /api/students/:studentId/assignments/:assignmentId
-router.route('/:studentId/assignments/:assignmentId').delete(removeAssignment);
-
-export { router as studentRouter} ;
+export default router;
